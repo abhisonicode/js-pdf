@@ -178,6 +178,12 @@ const c = 3;`,
     }
   ];
 
+  
+  // Paymnent Page
+  const goToPaymentPage = () => {
+    location.href = "https://superprofile.bio/vp/javascript-pdf"
+  }
+
   return (
     <div className="min-h-screen bg-premium-gradient text-white overflow-hidden relative">
       {/* Hero Section */}
@@ -200,7 +206,7 @@ const c = 3;`,
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-5">
-              <Button size="lg" className="bg-orange-gradient hover:scale-105 transition-transform text-black font-bold px-8 py-4 text-md w-full sm:w-auto max-w-sm">
+              <Button onClick={goToPaymentPage} size="lg" className="bg-orange-gradient hover:scale-105 transition-transform text-black font-bold px-8 py-4 text-md w-full sm:w-auto max-w-sm">
                 Download PDF - ₹349 Only
               </Button>
               <p className="text-sm text-gray-400">✨ Instant PDF Download</p>
@@ -477,7 +483,7 @@ const c = 3;`,
               </p>
             </div>
             <div className="flex flex-col items-center space-y-4">
-              <Button size="lg" className="bg-orange-gradient hover:scale-110 transition-transform text-black font-bold px-12 py-6 text-md animate-glow w-full sm:w-auto max-w-md">
+              <Button onClick={goToPaymentPage} size="lg" className="bg-orange-gradient hover:scale-110 transition-transform text-black font-bold px-12 py-6 text-md animate-glow w-full sm:w-auto max-w-md">
                 🚀 Download PDF - ₹349 Only
               </Button>
               <div className="flex flex-col sm:flex-row gap-4 text-premium-yellow">
@@ -511,7 +517,7 @@ const c = 3;`,
             <p className="text-white text-sm font-semibold">JavaScript Interview Guide</p>
             <p className="text-gray-300 text-xs">175 Questions & Answers</p>
           </div> */}
-          <Button className="w-full bg-orange-gradient hover:scale-105 transition-transform text-black font-bold py-3 text-sm animate-pulse">
+          <Button onClick={goToPaymentPage} className="w-full bg-orange-gradient hover:scale-105 transition-transform text-black font-bold py-3 text-sm animate-pulse">
             💳 Download PDF - ₹349 Only
           </Button>
         </div>
