@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckIcon, StarIcon, BookOpenIcon, CodeIcon, BrainIcon, TrophyIcon, ZapIcon, ShieldIcon, ClockIcon, FlameIcon } from "lucide-react";
 
+const PDF_PRICE = 249;
+
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [timeLeft, setTimeLeft] = useState({
@@ -12,6 +14,7 @@ const Index = () => {
     minutes: 45,
     seconds: 30
   });
+
 
   useEffect(() => {
     setIsVisible(true);
@@ -150,7 +153,7 @@ const c = 3;`,
     },
     {
       question: "Is this a one-time payment or subscription?",
-      answer: "It's a one-time payment of ₹349 only. No recurring charges, no hidden fees. Once you purchase, you own the content forever and can access it anytime."
+      answer: `It's a one-time payment of ${PDF_PRICE} only. No recurring charges, no hidden fees. Once you purchase, you own the content forever and can access it anytime.`
     },
     {
       question: "How will I receive the PDF?",
@@ -207,7 +210,7 @@ const c = 3;`,
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-5">
               <Button onClick={goToPaymentPage} size="lg" className="bg-orange-gradient hover:scale-105 transition-transform text-black font-bold px-8 py-4 text-md w-full sm:w-auto max-w-sm">
-                Download PDF - ₹349 Only
+                Download PDF - ₹{PDF_PRICE} Only
               </Button>
               <p className="text-sm text-gray-400">✨ Instant PDF Download</p>
             </div>
@@ -484,7 +487,7 @@ const c = 3;`,
             </div>
             <div className="flex flex-col items-center space-y-4">
               <Button onClick={goToPaymentPage} size="lg" className="bg-orange-gradient hover:scale-110 transition-transform text-black font-bold px-12 py-6 text-md animate-glow w-full sm:w-auto max-w-md">
-                🚀 Download PDF - ₹349 Only
+                🚀 Download PDF - ₹{PDF_PRICE} Only
               </Button>
               <div className="flex flex-col sm:flex-row gap-4 text-premium-yellow">
                 <span className="flex items-center text-sm"><ShieldIcon className="w-4 h-4 mr-2" />✨ Stand out in interviews</span>
@@ -518,7 +521,7 @@ const c = 3;`,
             <p className="text-gray-300 text-xs">175 Questions & Answers</p>
           </div> */}
           <Button onClick={goToPaymentPage} className="w-full bg-orange-gradient hover:scale-105 transition-transform text-black font-bold py-3 text-sm animate-pulse">
-            💳 Download PDF - ₹349 Only
+            💳 Download PDF - ₹{PDF_PRICE} Only
           </Button>
         </div>
       </div>
